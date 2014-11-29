@@ -1,0 +1,12 @@
+	.button-brighter:ACTIVE {
+		border-left-width: 3px;
+	}
+	
+	.button-brighter:FOCUS {
+		border-left-width: 3px;
+	}
+	
+	.button-brighter:active,
+	button-brighter.v-pressed {
+		border-width: 5px;
+	}

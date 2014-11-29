@@ -1,0 +1,228 @@
+// Global variable overrides. Must be declared before importing Valo.
+
+// Defines the plaintext font size, weight and family. Font size affects general component sizing.
+//$v-font-size: 16px;
+//$v-font-weight: 300;
+//$v-font-family: "Open Sans", sans-serif;
+
+// Defines the border used by all components.
+//$v-border: 1px solid (v-shade 0.7);
+//$v-border-radius: 4px;
+
+// Affects the color of some component elements, e.g Button, Panel title, etc
+//$v-background-color: hsl(210, 0%, 98%);
+// Affects the color of content areas, e.g  Panel and Window content, TextField input etc
+//$v-app-background-color: $v-background-color;
+
+// Affects the visual appearance of all components
+//$v-gradient: v-linear 8%;
+//$v-bevel-depth: 30%;
+//$v-shadow-opacity: 5%;
+
+// Defines colors for indicating status (focus, success, failure)
+//$v-focus-color: valo-focus-color(); // Calculates a suitable color automatically
+//$v-friendly-color: #2c9720;
+//$v-error-indicator-color: #ed473b;
+
+// For more information, see: https://vaadin.com/book/-/page/themes.valo.html
+// Example variants can be copy/pasted from https://vaadin.com/wiki/-/wiki/Main/Valo+Examples
+
+@import "../valo/valo.scss";
+
+@mixin christmastree {
+  @include valo;
+
+  // Insert your own theme rules here
+  
+  
+  .xmas-button-brighter:active,
+	xmas-button-brighter.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/brighter_p.png);
+	}
+  
+  .xmas-button-blue:active,
+	xmas-button-blue.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/blue_p.png);
+	}
+	
+  .xmas-button-darker:active,
+	xmas-button-darker.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/darker_p.png);
+	}
+  
+  .xmas-button-off:active,
+	xmas-button-off.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/off_p.png);
+	}
+	
+  .xmas-button-on:active,
+	xmas-button-on.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/on_p.png);
+	}
+	
+  .xmas-button-red:active,
+	xmas-button-red.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/red_p.png);
+	}
+	
+  .xmas-button-green:active,
+	xmas-button-green.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/green_p.png);
+	}
+	
+  .xmas-button-white:active,
+	xmas-button-white.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/white_p.png);
+	}
+	
+  .xmas-button-darkorange:active,
+	xmas-button-darkorange.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/darkorange_p.png);
+	}
+	
+  .xmas-button-lightgreen:active,
+	xmas-button-lightgreen.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/lightgreen_p.png);
+	}
+	
+  .xmas-button-lightblue:active,
+	xmas-button-lightblue.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/lightblue_p.png);
+	}
+	
+  .xmas-button-flash:active,
+	xmas-button-flash.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/flash_p.png);
+	}
+	
+  .xmas-button-orange:active,
+	xmas-button-orange.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/orange_p.png);
+	}
+
+  .xmas-button-lightcyan:active,
+	xmas-button-lightcyan.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/lightcyan_p.png);
+	}
+	
+  .xmas-button-darkpurple:active,
+	xmas-button-darkpurple.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/darkpurple_p.png);
+	}
+	
+  .xmas-button-strobe:active,
+	xmas-button-strobe.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/strobe_p.png);
+	}
+	
+  .xmas-button-lightorange:active,
+	xmas-button-lightorange.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/lightorange_p.png);
+	}
+	
+  .xmas-button-lightorange:active,
+	xmas-button-lightorange.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/lightorange_p.png);
+	}
+	
+  .xmas-button-cyan:active,
+	xmas-button-cyan.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/cyan_p.png);
+	}
+	
+  .xmas-button-purple:active,
+	xmas-button-purple.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/purple_p.png);
+	}
+	
+  .xmas-button-fade:active,
+	xmas-button-fade.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/fade_p.png);
+	}
+	
+  .xmas-button-yellow:active,
+	xmas-button-yellow.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/yellow_p.png);
+	}
+	
+  .xmas-button-darkcyan:active,
+	xmas-button-darkcyan.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/darkcyan_p.png);
+	}
+	
+  .xmas-button-lightpurple:active,
+	xmas-button-lightpurple.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/lightpurple_p.png);
+	}
+	
+  .xmas-button-smooth:active,
+	xmas-button-smooth.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/smooth_p.png);
+	}
+
+  .xmas-button-star:active,
+	xmas-button-fade.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/star_p.png);
+	}
+
+  .xmas-button-angel:active,
+	xmas-button-fade.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-image: url(./images/angel_p.png);
+	}
+	
+  
+}
