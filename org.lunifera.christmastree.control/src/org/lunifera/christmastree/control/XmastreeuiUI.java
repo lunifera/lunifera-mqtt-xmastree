@@ -16,14 +16,15 @@ import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.Reindeer;
+import com.vaadin.ui.themes.ValoTheme;
 
 @SuppressWarnings("serial")
 @Theme("christmastree")
 @Push
-public class XmastreeuiUI extends UI implements ControlUI.CommandDelegate {
+public class XmastreeuiUI extends UI implements ControlComponent.CommandDelegate {
 
 	@WebServlet(value = "/*", asyncSupported = true)
-	@VaadinServletConfiguration(productionMode = false, ui = XmastreeuiUI.class)
+	@VaadinServletConfiguration(productionMode = false, ui = XmastreeuiUI.class, widgetset = "org.lunifera.christmastree.control.widgetset.Org_lunifera_christmastree_controlWidgetset")
 	public static class Servlet extends VaadinServlet {
 	}
 	
@@ -32,13 +33,13 @@ public class XmastreeuiUI extends UI implements ControlUI.CommandDelegate {
 
 	@Override
 	protected void init(VaadinRequest request) {
+		
 		final VerticalLayout layout = new VerticalLayout();
 		layout.setMargin(true);
 		layout.setSizeFull();
-		layout.setStyleName(Reindeer.LAYOUT_BLACK);
 		setContent(layout);
 
-		ControlUI ui = new ControlUI(this);
+		ControlComponent ui = new ControlComponent(this);
 		ui.setSizeFull();
 		layout.addComponent(ui);
 

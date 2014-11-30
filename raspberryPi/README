@@ -1,0 +1,12 @@
+Connect GP1 (in wiringPi numbering) to the transistor for motor control.
+Use GP3 as signal for the LED (transistor basis).
+Connect GP5 to pin 7 of the Arduino.
+Connect GND to the Arduino GND, the LED GND and the motor GND.
+Connect 3.3V to the LED transistor collector.
+
+Put these scripts in a folder on your RPi.
+You need to have Lua installed on the device.
+
+Change the MQTT broker in 2014.lua to the server you will use.
+
+Start the MQTT client with "lua 2014.lua".
