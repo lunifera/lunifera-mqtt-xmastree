@@ -27,7 +27,7 @@ public class XmastreeuiUI extends UI implements ControlComponent.CommandDelegate
 	@VaadinServletConfiguration(productionMode = false, ui = XmastreeuiUI.class, widgetset = "org.lunifera.christmastree.control.widgetset.Org_lunifera_christmastree_controlWidgetset")
 	public static class Servlet extends VaadinServlet {
 	}
-	
+
 	public MqttClient client = null;
 
 
@@ -57,7 +57,6 @@ public class XmastreeuiUI extends UI implements ControlComponent.CommandDelegate
 
 	@Override
 	public void execute(int command) {
-	
 
 		MqttMessage msg = new MqttMessage();
 		msg.setPayload(String.format("button:%s", String.valueOf(command))

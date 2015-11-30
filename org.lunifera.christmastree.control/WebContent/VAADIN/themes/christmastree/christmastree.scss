@@ -188,7 +188,7 @@ $v-error-indicator-color: #ed473b;
 		background-position: 0px 0px;
    		background-image: url(./images/yellow_p.png);
 	}
-	
+
   .xmas-button-darkcyan:active,
 	xmas-button-darkcyan.v-pressed {
 		border-width: 1px;
@@ -214,15 +214,20 @@ $v-error-indicator-color: #ed473b;
 	xmas-button-fade.v-pressed {
 		border-width: 1px;
 		background-position: 0px 0px;
-   		background-image: url(./images/star_p.png);
+   		background-color: white;
+	}
+
+  .xmas-button-snow:active,
+	xmas-button-fade.v-pressed {
+		border-width: 1px;
+		background-position: 0px 0px;
+   		background-color: white;
 	}
 
   .xmas-button-angel:active,
 	xmas-button-fade.v-pressed {
 		border-width: 1px;
 		background-position: 0px 0px;
-   		background-image: url(./images/angel_p.png);
+   		background-color: white;
 	}
-	
-  
 }
