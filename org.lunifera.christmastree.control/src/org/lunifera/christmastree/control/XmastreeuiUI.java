@@ -39,7 +39,8 @@ public class XmastreeuiUI extends UI implements DesktopControlComponent.CommandD
 
 		WebBrowser browser = getPage().getWebBrowser();
 		AbstractControllerComponent ui = null;
-		if (browser.isAndroid() || browser.isIOS() || browser.isWindowsPhone()) {
+		int width = browser.getScreenWidth();
+		if (width <= 780) {
 			ui = new MobileControlComponent(this);
 		} else {
 			ui = new DesktopControlComponent(this);
