@@ -35,6 +35,15 @@ $v-error-indicator-color: #ed473b;
 
   // Insert your own theme rules here
   
+  .attributions {
+  	color: #E8AA30;
+  	font-size: 12px;
+  }
+  
+  .christmastree-canvas {
+  	background-color: lightslategrey;
+  }
+  
   .xmas-button-brighter:active,
 	xmas-button-brighter.v-pressed {
 		border-width: 1px;
@@ -230,4 +239,6 @@ $v-error-indicator-color: #ed473b;
 		background-position: 0px 0px;
    		background-color: white;
 	}
+	
+	
 }

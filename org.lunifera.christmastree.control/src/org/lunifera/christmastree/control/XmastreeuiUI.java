@@ -14,6 +14,8 @@ import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.server.WebBrowser;
+import com.vaadin.ui.Notification;
+import com.vaadin.ui.Notification.Type;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
@@ -35,6 +37,7 @@ public class XmastreeuiUI extends UI implements DesktopControlComponent.CommandD
 		final VerticalLayout layout = new VerticalLayout();
 		layout.setMargin(true);
 		layout.setSizeFull();
+		layout.setPrimaryStyleName("christmastree-canvas");
 		setContent(layout);
 
 		WebBrowser browser = getPage().getWebBrowser();
@@ -53,10 +56,13 @@ public class XmastreeuiUI extends UI implements DesktopControlComponent.CommandD
 
 		try {
 			client = new MqttClient("tcp://lun.lunifera.org:1883", MqttClient.generateClientId());
+			client.setTimeToWait(2000);
 			client.connect();
 			client.setCallback(ui);
 		} catch (MqttException e) {
-			e.printStackTrace();
+			Notification.show(
+					"Can not connect to tcp://lun.lunifera.org:1883. \nRemotecontrolling the Christmastree is not possible right now.",
+					Type.ERROR_MESSAGE);
 		}
 	}
 

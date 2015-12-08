@@ -1,12 +1,14 @@
 package org.lunifera.christmastree.control;
 
-import com.vaadin.server.ExternalResource;
 import com.vaadin.server.ThemeResource;
+import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.ui.AbsoluteLayout;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Embedded;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Image;
+import com.vaadin.ui.Label;
+import com.vaadin.ui.PopupView;
 import com.vaadin.ui.VerticalLayout;
 
 @SuppressWarnings("serial")
@@ -47,14 +49,32 @@ public class DesktopControlComponent extends AbstractControllerComponent {
 		VerticalLayout vl = new VerticalLayout();
 		vl.setHeight("500px");
 		vl.setWidth("400px");
+		vl.setSpacing(true);
 		mainLayout.addComponent(vl, "top:140.0px;left:100.0px;");
+
 		contentLayout = buildContent();
 		vl.addComponent(contentLayout);
+		vl.setExpandRatio(contentLayout, 1.0f);
 
-		Image image = new Image();
-		image.setHeight("480px");
-		image.setWidth("640px");
-		image.setSource(new ExternalResource("http://192.168.0.108:8081/stream", "video/x-motion-jpeg"));
+		// licenses
+		PopupView licenseLink = new PopupView("Attributions",
+				new Label("<div><i>Monitor/tablet/smartphone</i> and <i>tree</i> icons </br> made by "
+						+ "<a href=\"http://www.freepik.com\" title=\"Freepik\">Freepik</a> "
+						+ "from <a href=\"http://www.flaticon.com\" title=\"Flaticon\">www.flaticon.com</a> </br>"
+						+ "is licensed under <a href=\"http://creativecommons.org/licenses/by/3.0/\" "
+						+ "title=\"Creative Commons BY 3.0\">CC BY 3.0</a></div>", ContentMode.HTML));
+		licenseLink.setPrimaryStyleName("attributions");
+		vl.addComponent(licenseLink);
+
+		Label image = new Label();
+		image.setHeight("400px");
+		image.setWidth("100%");
+		// image.setValue("<div style=\"overflow:hidden; width: 400px;
+		// margin-left: -60px;\">"
+		// + "<img src=\"http://77.119.240.22:8081\"/>" + "</div>");
+		image.setValue("<div style=\"overflow:hidden; width: 370px; margin-left: -60px;\">"
+				+ "<img src=\"http://192.168.0.108:8081\"/>" + "</div>");
+		image.setContentMode(ContentMode.HTML);
 		mainLayout.addComponent(image, "top:140.0px;left:600.0px;");
 
 		return mainLayout;
@@ -93,7 +113,7 @@ public class DesktopControlComponent extends AbstractControllerComponent {
 
 		// button_off
 		button_off = new Embedded(null, new ThemeResource("./images/off.png"));
-		button_off.setCaption("OFF");
+		button_off.setCaption("Off");
 		button_off.setImmediate(true);
 		button_off.setWidth("-1px");
 		button_off.setHeight("-1px");
@@ -104,7 +124,7 @@ public class DesktopControlComponent extends AbstractControllerComponent {
 
 		// button_on
 		button_on = new Embedded(null, new ThemeResource("./images/on.png"));
-		button_on.setCaption("ON");
+		button_on.setCaption("On");
 		button_on.setImmediate(true);
 		button_on.setWidth("-1px");
 		button_on.setHeight("-1px");
@@ -192,7 +212,7 @@ public class DesktopControlComponent extends AbstractControllerComponent {
 
 		// button_flash
 		button_flash = new Embedded(null, new ThemeResource("./images/flash.png"));
-		button_flash.setCaption("FLASH");
+		button_flash.setCaption("Flash");
 		button_flash.setImmediate(true);
 		button_flash.setWidth("-1px");
 		button_flash.setHeight("-1px");
@@ -236,7 +256,7 @@ public class DesktopControlComponent extends AbstractControllerComponent {
 
 		// button_strobe
 		button_strobe = new Embedded(null, new ThemeResource("./images/strobe.png"));
-		button_strobe.setCaption("STROBO");
+		button_strobe.setCaption("Strobo");
 		button_strobe.setImmediate(true);
 		button_strobe.setWidth("-1px");
 		button_strobe.setHeight("-1px");
@@ -280,7 +300,7 @@ public class DesktopControlComponent extends AbstractControllerComponent {
 
 		// button_fade
 		button_fade = new Embedded(null, new ThemeResource("./images/fade.png"));
-		button_fade.setCaption("FADE");
+		button_fade.setCaption("Fade");
 		button_fade.setImmediate(true);
 		button_fade.setWidth("-1px");
 		button_fade.setHeight("-1px");
@@ -324,7 +344,7 @@ public class DesktopControlComponent extends AbstractControllerComponent {
 
 		// button_smooth
 		button_smooth = new Embedded(null, new ThemeResource("./images/smooth.png"));
-		button_smooth.setCaption("SMOOTH");
+		button_smooth.setCaption("Smooth");
 		button_smooth.setImmediate(true);
 		button_smooth.setWidth("-1px");
 		button_smooth.setHeight("-1px");
